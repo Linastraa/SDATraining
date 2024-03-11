@@ -1,4 +1,4 @@
-package testPackage;
+package junitTestsPackage;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -11,11 +11,11 @@ public class LeonTask_alertsTesting extends Tests{
     @Test
     public void alertsTesting(){
         //Go to URL: http://demo.automationtesting.in/Alerts.html
-        driver.navigate().to("http://demo.automationtesting.in/Alerts.html");
+        bot.navigate("http://demo.automationtesting.in/Alerts.html");
 
        //Click "Alert with OK" and click 'click the button to display an alert box
         By alertWithOkbutton = By.xpath("//button[@onclick='alertbox()']");
-        driver.findElement(alertWithOkbutton).click();
+        bot.click(alertWithOkbutton);
 
         //Accept Alert(I am an alert box!) and print alert on console.
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
@@ -25,9 +25,9 @@ public class LeonTask_alertsTesting extends Tests{
 
         //Click "Alert with OK & Cancel" and click 'click the button to display a confirm box
         By alertWithOkAndCancelLink = By.xpath("//a[@href='#CancelTab']");
-        driver.findElement(alertWithOkAndCancelLink).click();
+        bot.click(alertWithOkAndCancelLink);
         By alertWithOkAndCancelButton = By.xpath("//button[@onclick='confirmbox()']");
-        driver.findElement(alertWithOkAndCancelButton).click();
+        bot.click(alertWithOkAndCancelButton);
 
         //Cancel Alert (Press a Button !)
         alert = wait.until(ExpectedConditions.alertIsPresent());
@@ -38,9 +38,9 @@ public class LeonTask_alertsTesting extends Tests{
 
         //Click "Alert with Textbox" and click 'click the button to demonstrate the prompt box
         By alertWithTextBoxLink = By.xpath("//a[@href='#Textbox']");
-        driver.findElement(alertWithTextBoxLink).click();
+        bot.click(alertWithTextBoxLink);
         By alertWithTextBoxButton = By.xpath("//button[@onclick='promptbox()']");
-        driver.findElement(alertWithTextBoxButton).click();
+        bot.click(alertWithTextBoxButton);
 
         //And then sendKeys «Bootcamp» (Please enter your name)
         alert.sendKeys("«Bootcamp» Sulaiman Ahmed Alzahrani");

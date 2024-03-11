@@ -1,4 +1,4 @@
-package testPackage;
+package junitTestsPackage;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -12,9 +12,10 @@ public class googleTesting extends Tests {
 
     @Test
     public void radioButtonVerification3() {
-        driver.navigate().to("https://google.com/");
+        bot.navigate("https://google.com/");
         By searchBox = By.id("APjFqb");
-        driver.findElement(searchBox).sendKeys("Selenium" + Keys.ENTER);
+        bot.type(searchBox,"Selenium" + Keys.ENTER);
+        //driver.findElement(searchBox).sendKeys("Selenium" + Keys.ENTER);
         By expectedResult = By.xpath("//div[@id='result-stats']");
 
         Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(2));

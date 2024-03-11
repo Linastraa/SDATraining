@@ -1,4 +1,4 @@
-package testPackage;
+package junitTestsPackage;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,7 @@ public class cookiesTesting extends Tests{
 
     @Test
     public void cookies(){
-        driver.navigate().to("https://kitchen.applitools.com/ingredients/cookie");
+        bot.navigate("https://kitchen.applitools.com/ingredients/cookie");
         var cookies = driver.manage().getCookies();
         System.out.println("Initial size: " + cookies.size());
         cookies.forEach(System.out::println);

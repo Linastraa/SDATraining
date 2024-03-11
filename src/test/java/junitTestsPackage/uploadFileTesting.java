@@ -1,4 +1,4 @@
-package testPackage;
+package junitTestsPackage;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -11,10 +11,11 @@ public class uploadFileTesting extends Tests{
     @Test
     public void uploadFile(){
         logger.info("Navigating to the page : "+url);
-        driver.navigate().to(url);
+        bot.navigate(url);
         By fileUploadInput = By.id("file-upload");
         logger.info("Uploading the picture "+picturePath+" to the website");
-        driver.findElement(fileUploadInput).sendKeys("C:\\Users\\linas\\OneDrive\\Desktop\\download.png");
+        //driver.findElement(fileUploadInput).sendKeys("C:\\Users\\linas\\OneDrive\\Desktop\\download.png");
+        bot.type(fileUploadInput,picturePath);
 
         // this code below will not work because the button is inside a form
         //By uploadButton = By.id("file-upload");

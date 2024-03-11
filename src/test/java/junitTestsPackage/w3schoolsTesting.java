@@ -1,4 +1,4 @@
-package testPackage;
+package junitTestsPackage;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -16,7 +16,7 @@ public class w3schoolsTesting extends Tests{
 
     @Test
     public void loginInform(){
-        driver.navigate().to("https://www.w3schools.com/html/html_tables.asp");
+        bot.navigate("https://www.w3schools.com/html/html_tables.asp");
 
         By name = RelativeLocator.with(By.xpath("//table[@id='customers']//tr[td[text()='Alfreds Futterkiste']]/td[position()=2]"));
         var actualName = driver.findElement(name).getText();

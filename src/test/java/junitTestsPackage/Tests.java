@@ -1,5 +1,6 @@
-package testPackage;
+package junitTestsPackage;
 
+import engine.ActionsBot;
 import org.apache.logging.log4j.core.config.Configurator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,11 +15,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-abstract public class Tests {
+public abstract class Tests {
 
     protected WebDriver driver;
     protected Wait<WebDriver> wait;
     protected static Logger logger;
+
+    protected ActionsBot bot;
 
     @BeforeAll
     public static void beforeAll(){
@@ -35,7 +38,7 @@ abstract public class Tests {
         driver = new ChromeDriver(chromeOptions);
         logger.info("Configuring 20 seconds explicit wait");
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-
+        bot = new ActionsBot(driver, wait, logger);
     }
 
 

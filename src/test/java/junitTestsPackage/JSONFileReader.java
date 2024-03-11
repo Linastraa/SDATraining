@@ -1,4 +1,4 @@
-package testPackage;
+package junitTestsPackage;
 /**
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

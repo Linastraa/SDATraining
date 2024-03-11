@@ -1,4 +1,4 @@
-package testPackage;
+package junitTestsPackage;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -14,7 +14,7 @@ public class draggingAndScrollingTesting extends Tests{
 
     @Test
     public void scrollTest(){
-        driver.navigate().to("https://rangeslider.js.org/");
+        bot.navigate("https://rangeslider.js.org/");
 
         wait.until(f ->{
             new Actions(driver)
@@ -28,7 +28,7 @@ public class draggingAndScrollingTesting extends Tests{
 
     @Test
     public void dragTest(){
-        driver.navigate().to("https://www.selenium.dev/selenium/web/droppableItems.html");
+        bot.navigate("https://www.selenium.dev/selenium/web/droppableItems.html");
         By dragLocator = By.id("draggable");
         By dropLocator = By.id("droppable");
         new Actions(driver)
@@ -41,7 +41,7 @@ public class draggingAndScrollingTesting extends Tests{
 
     @Test
     public void windowTest(){
-        driver.navigate().to("https://www.selenium.dev/");
+        bot.navigate("https://www.selenium.dev/");
 
         By browserStackImage = By.xpath("//img[@alt='BrowserStack']");
         File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

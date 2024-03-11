@@ -1,9 +1,8 @@
-package testPackage;
+package junitTestsPackage;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class addingItemToCartTesting extends Tests{
 
@@ -16,15 +15,14 @@ assert that the item name is correct inside the cart
 
     @Test
     public void addFirstItemToCart(){
-        driver.navigate().to("https://www.saucedemo.com/v1/inventory.html");
+        bot.navigate("https://www.saucedemo.com/v1/inventory.html");
 
-        WebElement firstItem = driver.findElement(By.xpath("//*[@id=\"item_4_title_link\"]/div"));
-        firstItem.click();
+        By firstItem = By.xpath("(//button[contains(@class,btn_inventory)])[3]");
+        bot.click(firstItem);
 
-        WebElement button = driver.findElement(By.xpath("//*[@id=\"inventory_item_container\"]/div/div/div/button"));
-        button.click();
-        WebElement cart = driver.findElement(By.id("shopping_cart_container"));
-        cart.click();
+        By cart = By.id("shopping_cart_container");
+        bot.click(cart);
+
         String itemInCart = driver.findElement(By.xpath("//div[@class='inventory_item_name']")).getText();
         System.out.println(itemInCart);
         Assertions.assertEquals("Sauce Labs Backpack",itemInCart);

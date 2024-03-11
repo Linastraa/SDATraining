@@ -1,4 +1,4 @@
-package testPackage;
+package junitTestsPackage;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -11,7 +11,7 @@ public class LeonTask_dropDownTesting extends Tests{
 
     @Test
     public void radioButtonVerification3() {
-        driver.navigate().to("https://demoqa.com/select-menu");
+        bot.navigate("https://demoqa.com/select-menu");
         By menu = By.id("oldSelectMenu");
         Select select=new Select(driver.findElement(menu));
 

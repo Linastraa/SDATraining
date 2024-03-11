@@ -1,4 +1,4 @@
-package testPackage;
+package junitTestsPackage;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -11,14 +11,17 @@ import org.openqa.selenium.support.ui.Select;
 public class webFormFullTesting extends Tests{
 
     private void browserAddress(){
-        driver.navigate().to("https://www.selenium.dev/selenium/web/web-form.html");
+
+        //driver.navigate().to("https://www.selenium.dev/selenium/web/web-form.html");
+        bot.navigate("https://www.selenium.dev/selenium/web/web-form.html");
+
     }
     @Test
     public void webFormWritingTextInput(){
         browserAddress();
         // writing in text input
         By textInput = By.id("my-text-id");
-        driver.findElement(textInput).sendKeys("Selenium is Great!");
+        bot.type(textInput,"Selenium is Great!");
     }
 
     @Test
@@ -26,7 +29,7 @@ public class webFormFullTesting extends Tests{
         browserAddress();
         // writing password
         By pass = By.name("my-password");
-        driver.findElement(pass).sendKeys("876543210");
+        bot.type(pass,"876543210");
     }
 
     @Test
@@ -35,7 +38,7 @@ public class webFormFullTesting extends Tests{
         //writing in text area
         By textArea = By.name("my-textarea");
         WebElement area = driver.findElement(By.name("my-textarea"));
-        driver.findElement(textArea).sendKeys("This is an example text to fill the text area form");
+        bot.type(textArea,"This is an example text to fill the text area form");
         area.click();
         String text=area.getText();
         System.out.println(text);

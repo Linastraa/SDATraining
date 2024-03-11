@@ -1,4 +1,4 @@
-package testPackage;
+package junitTestsPackage;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -11,7 +11,7 @@ public class dropDownTesting extends Tests{
 
     @Test
     public void webFormButton(){
-        driver.navigate().to("https://the-internet.herokuapp.com/dropdown");
+        bot.navigate("https://the-internet.herokuapp.com/dropdown");
 
         By dr1 = By.id("dropdown");
         Select select = new Select(driver.findElement(dr1));

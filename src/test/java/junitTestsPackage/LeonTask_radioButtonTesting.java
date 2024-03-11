@@ -1,4 +1,4 @@
-package testPackage;
+package junitTestsPackage;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -20,10 +20,10 @@ public class LeonTask_radioButtonTesting extends Tests{
     @Test
     public void radioButtonVerification1() {
 
-        driver.navigate().to("https://demoqa.com/radio-button");
+        bot.navigate("https://demoqa.com/radio-button");
 
         By radio1 = By.xpath("//label[@class='custom-control-label' and @for='yesRadio']");
-        driver.findElement(radio1).click();
+        bot.click(radio1);
 
         //WebElement yesButton= driver.findElement(By.xpath("//input[@id='yesRadio']"));
         //JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -38,7 +38,7 @@ public class LeonTask_radioButtonTesting extends Tests{
 
     @Test
     public void radioButtonVerification2() {
-        driver.navigate().to("https://demoqa.com/radio-button");
+        bot.navigate("https://demoqa.com/radio-button");
 
         WebElement impressiveButton = driver.findElement(By.xpath("//input[@id='impressiveRadio']"));
         JavascriptExecutor js1 = (JavascriptExecutor) driver;
@@ -53,7 +53,7 @@ public class LeonTask_radioButtonTesting extends Tests{
 
     @Test
     public void radioButtonVerification3() {
-        driver.navigate().to("https://demoqa.com/radio-button");
+        bot.navigate("https://demoqa.com/radio-button");
 
         By NoButton = By.xpath("//input[@id='noRadio']");
         //WebElement noButton = driver.findElement(By.xpath("//input[@id='noRadio']"));

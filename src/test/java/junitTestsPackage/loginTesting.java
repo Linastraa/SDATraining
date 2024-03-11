@@ -1,4 +1,4 @@
-package testPackage;
+package junitTestsPackage;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -50,15 +50,15 @@ public class loginTesting extends Tests{
     }
 
     private void loginInform(String username, String password){
-        driver.navigate().to("https://www.saucedemo.com/v1/index.html");
+        bot.navigate("https://www.saucedemo.com/v1/index.html");
 
         By userField = By.id("user-name");
-        driver.findElement(userField).sendKeys(username);
+        bot.type(userField,username);
 
         By passField = By.id("password");
-        driver.findElement(passField).sendKeys(password);
+        bot.type(passField,password);
 
         By loginButton = By.id("login-button");
-        driver.findElement(loginButton).click();
+        bot.click(loginButton);
     }
 }

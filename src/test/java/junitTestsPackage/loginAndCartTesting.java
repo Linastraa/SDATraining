@@ -1,9 +1,8 @@
-package testPackage;
+package junitTestsPackage;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class loginAndCartTesting extends Tests{
 
@@ -31,16 +30,16 @@ public class loginAndCartTesting extends Tests{
 
 
     private void loginInform(String username, String password){
-        driver.navigate().to(mainPage);
+        bot.navigate(mainPage);
 
-        WebElement userField= driver.findElement(By.id("user-name"));
-        userField.sendKeys(username);
+        By userField = By.id("user-name");
+        bot.type(userField,username);
 
-        WebElement passField= driver.findElement(By.id("password"));
-        passField.sendKeys(password);
+        By passField = By.id("password");
+        bot.type(passField,password);
 
-        WebElement loginButton= driver.findElement(By.id("login-button"));
-        loginButton.click();
+        By loginButton = By.id("login-button");
+        bot.click(loginButton);
     }
 
     @Test
@@ -54,14 +53,14 @@ public class loginAndCartTesting extends Tests{
     @Test
     public void addingFirstAndLastItemToCart(){
         Login();
-        WebElement firstItemButton=driver.findElement(By.xpath("(//button[contains(@class,'btn_primary')])[1]"));
-        WebElement lastItemButton=driver.findElement(By.xpath("(//button[contains(@class,'btn_primary')])[6]"));
 
-        firstItemButton.click();
+        By firstItemButton = By.xpath("(//button[contains(@class,'btn_primary')])[1]");
+        bot.click(firstItemButton);
 
-        lastItemButton.click();
+        By lastItemButton = By.xpath("(//button[contains(@class,'btn_primary')])[5]");
+        bot.click(lastItemButton);
 
-        driver.navigate().to(cartPage);
+        bot.navigate(cartPage);
         String firstName=driver.findElement(By.xpath("(//div[@class='inventory_item_name'])[1]")).getText();
         String secondName=driver.findElement(By.xpath("(//div[@class='inventory_item_name'])[2]")).getText();
         String finalName=firstName+" "+secondName;
