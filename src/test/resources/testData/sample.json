@@ -2,5 +2,10 @@
   "name": "Sulaiman Ahmed Alzahrani",
   "age": 23,
   "city": "Taif",
-  "searchQuery": "Selenium WebDriver"
+  "searchQuery": "Selenium WebDriver",
+
+  "SoftAssertionsTestData": {
+    "Username": "student",
+    "Password": "Password123"
+  }
 }

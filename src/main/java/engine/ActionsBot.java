@@ -20,7 +20,7 @@ public class ActionsBot {
 
     public void navigate(String url){
         logger.info("Navigating to: "+url);
-        driver.navigate().to(url);
+        driver.get(url);
     }
 
     public void type(By locator, CharSequence text){
