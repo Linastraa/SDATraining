@@ -27,9 +27,10 @@ public class LeonsSixthAssignment extends Tests {
 // Otherwise, new data will be written on the old data
     @Test
     public void test() throws IOException {
+        String path = "C:\\Users\\linas\\IdeaProjects\\WebElementsTesting\\src\\test\\resources\\testData\\";
 
         Workbook wb = new HSSFWorkbook();
-        try  (OutputStream fileOut = new FileOutputStream("Javatpoint.xls")) {
+        try  (OutputStream fileOut = new FileOutputStream(path+"ExcelFile.xls")) {
             Sheet sheet1 = wb.createSheet("First Sheet");
 
             Row row1 = sheet1.createRow(0);
@@ -159,7 +160,7 @@ public class LeonsSixthAssignment extends Tests {
             System.out.println(e.getMessage());
         }
 
-        try (InputStream inp = new FileInputStream("Javatpoint.xls")) {
+        try (InputStream inp = new FileInputStream(path+"ExcelFile.xls")) {
             Workbook wb1 = WorkbookFactory.create(inp);
             Sheet sheet = wb1.getSheetAt(0);
             Row row = sheet.getRow(2);
