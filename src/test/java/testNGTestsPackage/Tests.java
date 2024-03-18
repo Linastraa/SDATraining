@@ -1,6 +1,7 @@
 package testNGTestsPackage;
 
 import engine.ActionsBot;
+import engine.CustomListeners;
 import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,6 +15,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
@@ -40,7 +42,6 @@ public class Tests {
         testData =  (JSONObject) new JSONParser().parse( new FileReader("src/test/resources/testData/sample.json", StandardCharsets.UTF_8) );
     }
 
-    @Step
     @Parameters({"target-browser"})
     @BeforeMethod
     public void beforeMethod(@Optional("chrome") String targetBrowser){
@@ -69,13 +70,15 @@ public class Tests {
 //                driver.manage().window().maximize();
 //            }
         }
+        driver = new EventFiringDecorator(new CustomListeners()).decorate(driver);
+
+        driver.manage().window().maximize();
 
         logger.info("Configuring 20 seconds explicit wait");
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         bot = new ActionsBot(driver, wait, logger);
     }
 
-    @Step
     @AfterMethod
     public void afterMethod(){
         //terminating the session

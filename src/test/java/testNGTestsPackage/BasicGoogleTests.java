@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-//@Listeners(CustomListeners.class)
+@Listeners(CustomListeners.class)
 public class BasicGoogleTests extends Tests{
 
     @Parameters({ "searchQuery" })
