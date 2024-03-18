@@ -173,7 +173,7 @@ public class LeonsSixthAssignment extends Tests {
             }
         }
         catch(Exception e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
 
 }

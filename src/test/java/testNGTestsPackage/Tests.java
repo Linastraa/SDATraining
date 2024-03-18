@@ -1,6 +1,7 @@
 package testNGTestsPackage;
 
 import engine.ActionsBot;
+import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.Configurator;
@@ -32,21 +33,14 @@ public class Tests {
     protected ActionsBot bot;
     protected static JSONObject testData;
 
-
-
-
-
-
     @BeforeClass
     public static void beforeClass() throws IOException, ParseException {
         Configurator.initialize(null, "src/main/resources/properties/log4j2.properties");
         logger = LogManager.getLogger(Tests.class.getName());
         testData =  (JSONObject) new JSONParser().parse( new FileReader("src/test/resources/testData/sample.json", StandardCharsets.UTF_8) );
-
-
     }
 
-
+    @Step
     @Parameters({"target-browser"})
     @BeforeMethod
     public void beforeMethod(@Optional("chrome") String targetBrowser){
@@ -81,7 +75,7 @@ public class Tests {
         bot = new ActionsBot(driver, wait, logger);
     }
 
-
+    @Step
     @AfterMethod
     public void afterMethod(){
         //terminating the session
