@@ -13,5 +13,10 @@
     "lockedUsername": "locked_out_user",
     "problemUsername": "problem_user",
     "password": "secret_sauce"
-}
+},
+  "expandtestingData": {
+    "username": "practice",
+    "password": "SuperSecretPassword!",
+    "wrongPassword": "password"
+  }
 }
