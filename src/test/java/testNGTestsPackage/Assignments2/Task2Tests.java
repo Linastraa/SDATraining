@@ -7,7 +7,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import testNGTestsPackage.Tests;
+import testNGTestsPackage.base.Tests;
 
 import java.io.FileInputStream;
 import java.io.IOException;

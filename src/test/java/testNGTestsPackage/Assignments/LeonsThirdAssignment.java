@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import testNGTestsPackage.Tests;
+import testNGTestsPackage.base.Tests;
 
 public class LeonsThirdAssignment extends Tests {
 

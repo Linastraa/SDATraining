@@ -1,13 +1,10 @@
 package testNGTestsPackage.Assignments;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WindowType;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import testNGTestsPackage.Tests;
+import testNGTestsPackage.base.Tests;
 
-import java.util.Iterator;
 import java.util.Set;
 
 public class LeonsSecondAssignment extends Tests {

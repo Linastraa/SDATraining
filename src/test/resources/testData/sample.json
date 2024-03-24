@@ -18,5 +18,20 @@
     "username": "practice",
     "password": "SuperSecretPassword!",
     "wrongPassword": "password"
+  },
+  "LumaData": {
+    "firstName": "Sulaiman",
+    "lastName": "Alzahrani",
+    "email": "lhtsssaf@gmail.com",
+    "password": "Linastra@1420",
+    "cpassword": "Linastra@1420"
+  },
+  "LambdaTest": {
+    "firstName": "Sulaiman",
+    "lastName": "Alzahrani",
+    "email": "tessstt1tt@gmail.com",
+    "telephone": "+966123456789",
+    "password": "Linastra@1420",
+    "cpassword": "Linastra@1420"
   }
 }

@@ -2,7 +2,7 @@ package testNGTestsPackage.Assignments;
 
 import org.openqa.selenium.Cookie;
 import org.testng.annotations.Test;
-import testNGTestsPackage.Tests;
+import testNGTestsPackage.base.Tests;
 
 public class LeonsFivthAssignment extends Tests {
 

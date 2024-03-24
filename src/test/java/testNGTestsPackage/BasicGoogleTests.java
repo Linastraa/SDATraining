@@ -8,11 +8,12 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import testNGTestsPackage.base.Tests;
 
 import java.util.concurrent.atomic.AtomicReference;
 
 @Listeners(CustomListeners.class)
-public class BasicGoogleTests extends Tests{
+public class BasicGoogleTests extends Tests {
 
     @Parameters({ "searchQuery" })
     @Test
@@ -33,7 +34,7 @@ public class BasicGoogleTests extends Tests{
     @Test(testName = "Check Google Logo Exists", description = "Given I am on the Google homepage, Then the Google logo should be displayed")
     public void assertGoogleLogoExists(){
         bot.navigate("https://www.google.com/");
-        By googleLogoImage = By.cssSelector("img[alt='Google']");
+        By googleLogoImage = By.id("hplogo");
         Assert.assertTrue(driver.findElement(googleLogoImage).isDisplayed());
     }
 }

@@ -1,7 +1,7 @@
 package testNGTestsPackage.Assignments2;
 
 import org.testng.annotations.Test;
-import testNGTestsPackage.Tests;
+import testNGTestsPackage.base.Tests;
 
 public class ClassesDependingOnEachOtherTests extends Tests
 {

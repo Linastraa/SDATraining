@@ -3,11 +3,9 @@ package testNGTestsPackage.Assignments;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.locators.RelativeLocator;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-import testNGTestsPackage.Tests;
+import testNGTestsPackage.base.Tests;
 
 
 public class LeonsFirstAssignment extends Tests {

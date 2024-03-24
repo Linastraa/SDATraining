@@ -3,7 +3,7 @@ package testNGTestsPackage.Assignments2;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import testNGTestsPackage.Tests;
+import testNGTestsPackage.base.Tests;
 
 public class Task3Tests extends Tests {
 

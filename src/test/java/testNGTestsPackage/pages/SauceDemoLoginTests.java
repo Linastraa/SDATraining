@@ -3,9 +3,8 @@ package testNGTestsPackage.pages;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.SauceDemoPages.inventory.Inventory;
 import pages.SauceDemoPages.login.Login;
-import testNGTestsPackage.Tests;
+import testNGTestsPackage.base.Tests;
 
 public class SauceDemoLoginTests extends Tests {
 

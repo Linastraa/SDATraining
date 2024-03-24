@@ -6,9 +6,10 @@ import org.openqa.selenium.By;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import testNGTestsPackage.base.Tests;
 
 @Listeners(CustomListeners.class)
-public class SoftAssertionsTests extends Tests{
+public class SoftAssertionsTests extends Tests {
 
     @Test(testName = "Basic Soft Assertions Test", description = "Given I am on the practice login page, When I input valid credentials, Then I am logged in successfully.")
     public void softAssertionsTest(){

@@ -3,7 +3,7 @@ package testNGTestsPackage.Assignments;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
-import testNGTestsPackage.Tests;
+import testNGTestsPackage.base.Tests;
 
 public class LeonsFourthAssignment extends Tests {
 

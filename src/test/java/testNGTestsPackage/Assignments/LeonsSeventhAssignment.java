@@ -5,11 +5,10 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.annotations.Test;
-import testNGTestsPackage.Tests;
+import testNGTestsPackage.base.Tests;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Objects;
 
 public class LeonsSeventhAssignment extends Tests {
 
